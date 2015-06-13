@@ -2,8 +2,12 @@
 
     Fancy.require ( {
         jQuery: false,
-        Fancy : "1.0.0"
+        Fancy : "1.0.1"
     } );
+
+    var NAME    = "FancySwipe",
+        VERSION = "1.0.1",
+        logged  = false;
 
     function getType ( e ) {
         var t = e.originalEvent.touches,
@@ -36,10 +40,6 @@
     function enableSelect ( e ) {
         e.removeAttr ( "unselectable" ).css ( "user-select", "" ).unbind ( "selectstart" );
     }
-
-    var NAME    = "FancySwipe",
-        VERSION = "1.0.0",
-        logged  = false;
 
     function FancySwipe ( element, settings ) {
         var SELF      = this;
@@ -117,6 +117,8 @@
 
     Fancy.swipe     = true;
     Fancy.api.swipe = function ( settings ) {
-        return this.set ( FancySwipe, settings );
+        return this.set ( NAME, function ( el ) {
+            return FancySwipe ( el, settings );
+        } );
     };
 }) ( window, jQuery );
