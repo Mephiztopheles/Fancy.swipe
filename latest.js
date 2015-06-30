@@ -2,8 +2,7 @@
 
     Fancy.require ( {
         jQuery       : false,
-        Fancy        : "1.0.2",
-        "Fancy.swipe": "1.0.2"
+        Fancy        : "1.0.2"
     } );
 
     var NAME    = "FancySwipe",
