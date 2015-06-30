@@ -6,7 +6,7 @@
     } );
 
     var NAME    = "FancySwipe",
-        VERSION = "1.0.1",
+        VERSION = "1.0.2",
         logged  = false;
 
     function getType ( e ) {
@@ -118,7 +118,7 @@
     Fancy.swipe     = true;
     Fancy.api.swipe = function ( settings ) {
         return this.set ( NAME, function ( el ) {
-            return FancySwipe ( el, settings );
+            return new FancySwipe ( el, settings );
         } );
     };
 }) ( window, jQuery );
