@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fancy-Swipe</title>
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/fancy/fancy.min.js"></script>
+        <script src="../fancyswipe.js"></script>
+        <meta name="viewport" content="with=device-width, user-scalable=0, init-scale=1.0">
+        <style>
+            body {
+                overflow : hidden;
+            }
+
+            #content {
+                width  : 80%;
+                height : 80vw;
+                margin : 0 auto;
+                border : 2px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content"></div>
+        <div id="log"></div>
+        <script>
+            Fancy( "#content" ).swipe( {
+                onMouseUp: function ( event, direction ) {
+                    switch ( direction ) {
+                        case "left":
+                            content.style.background = "red";
+                            break;
+                        case "right":
+                            content.style.background = "green";
+                            break;
+                        case "up":
+                            content.style.background = "blue";
+                            break;
+                        case "down":
+                            content.style.background = "yellow";
+                            break;
+                        case "left down":
+                            content.style.background = "black";
+                            break;
+                        case "left up":
+                            content.style.background = "orange";
+                            break;
+                        case "right down":
+                            content.style.background = "brown";
+                            break;
+                        case "right up":
+                            content.style.background = "purple";
+                            break;
+                    }
+                }
+            } )
+        </script>
+    </body>
+</html>
