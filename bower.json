@@ -2,7 +2,7 @@
   "name": "fancy-swipe",
   "title": "FancySwipe",
   "description": "JavaScript Swipe-plugin for Fancy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "fancyswipe.js",
   "homepage": "http://mephiztopheles.wtf/fancy-swipe",
   "author": "Markus Ahrweiler",
